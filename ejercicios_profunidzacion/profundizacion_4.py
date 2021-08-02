@@ -33,3 +33,47 @@ contenido.
 
 print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+print("Ingrese 3 palabras al sistema")
+palabra_1 = str(input())
+palabra_2 = str(input())
+palabra_3 = str(input())
+
+if (palabra_1 == palabra_2) or (palabra_1 == palabra_3) or (palabra_2 == palabra_3):
+    print("No se admiten palabras iguales, palabras ingresadas:", palabra_1, palabra_2, palabra_3)
+    quit()
+
+
+print("Ordena las palabras? 1-alfabetico o 2-por cantidad de letras")
+
+eleccion_orden = int(input())
+
+if eleccion_orden == 1:
+
+    if(palabra_1 > palabra_2 > palabra_3):
+        print('el orden alfabetico es:',palabra_3 , palabra_2 , palabra_1)
+    elif(palabra_3 > palabra_2 > palabra_1):
+        print('el orden alfabetico es:',palabra_1 , palabra_2 , palabra_3)
+    elif(palabra_2 > palabra_3 > palabra_1):
+        print('el orden alfabetico es:',palabra_1 , palabra_3 , palabra_2)
+    elif(palabra_2 > palabra_1 > palabra_3):
+        print('el orden alfabetico es:',palabra_3 , palabra_1 , palabra_2)
+    elif(palabra_1 > palabra_3 > palabra_2):
+        print('el orden alfabetico es:',palabra_2 , palabra_3 , palabra_1)
+    elif(palabra_3 > palabra_1 > palabra_2):
+        print('el orden alfabetico es:',palabra_2 , palabra_1 , palabra_3)
+
+if eleccion_orden == 2:
+
+    if(len(palabra_1) >= len(palabra_2) >= len(palabra_3)):
+        print('el orden por largo es:',palabra_1 , palabra_2 , palabra_3)
+    elif(len(palabra_3) >= len(palabra_2) >= len(palabra_1)):
+        print('el orden por largo es:',palabra_3 , palabra_2 , palabra_1)
+    elif(len(palabra_2) >= len(palabra_3) >= len(palabra_1)):
+        print('el orden por largo es:',palabra_2 , palabra_3 , palabra_1)
+    elif(len(palabra_2) >= len(palabra_1) >= len(palabra_3)):
+        print('el orden por largo es:',palabra_2 , palabra_1 , palabra_3)
+    elif(len(palabra_1) >= len(palabra_3) >= len(palabra_2)):
+        print('el orden por largo es:',palabra_1 , palabra_3 , palabra_2)
+    elif(len(palabra_3) >= len(palabra_1) >= len(palabra_2)):
+        print('el orden por largo es:',palabra_3 , palabra_1 , palabra_2)
+    
